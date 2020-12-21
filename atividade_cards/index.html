@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade LIMA</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="script/calculadora.js"></script>
+    <script src="script/cpf.js"></script>
+    <script src="script/fatorial.js"></script>
+    <script src="script/imc.js"></script>
+    <script src="script/moedas.js"></script>
+    <script src="script/numero_primo.js"></script>
+    <script src="script/par_e_impar.js"></script>
+    <script src="script/potenciacao.js"></script>
+    <script src="script/raiz.js"></script>
+    <script src="script/temperatura.js"></script>
+    <script src="script/triangulo.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <h2>Par e Impar</h2>
+            <form>
+                <input type="number" name="numero" id="par&impar" placeholder="Informe um número">
+            </form>
+            <div>
+                <button onclick="par_e_impar()">Executar</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_par_e_impar"></span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Calculadora</h2>
+            <form>
+                <input type="number" id="numero1" placeholder="Digite um número"><br>
+                <input type="number" id="numero2" placeholder="Digite um número"><br>
+            </form>
+            <div id="div_button_cal">
+                <button onclick="calcular(event)" class="button_cal" id="+">+</button>
+                <button onclick="calcular(event)" class="button_cal" id="-">-</button>
+                <button onclick="calcular(event)" class="button_cal" id="*">*</button>
+                <button onclick="calcular(event)" class="button_cal" id="/">/</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_calculadora"></span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Conversão de temperatura</h2>
+            <select name="opcoes_temp" id="temp" >
+                <option value="celsius para fahrenheit" >converter para fahrenheit</option>
+                <option value="fahrenheit para celsius" id="opcao2">converter para celsius</option>
+            </select>
+            <form>
+                <input type="number" id="temperatura" placeholder="Informe a temperatura em graus celsius ou fahrenheit">
+            </form>
+
+            <div>
+
+                <button onclick="temperatura()">Executar</button> <br>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_temperatura"></span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Conversão de Moedas</h2>
+            <select name="opcao_moeda" id="tipo_moeda">
+                <option value="1">dólar para real</option>
+                <option value="2">real para dólar</option>
+                <option value="3">euro para real</option>
+                <option value="4">real para euro</option>
+            </select>
+            <form>
+                <input type="number" id="moeda" placeholder="Informe um valor">
+                
+            </form>
+            <div>
+                <button onclick="moedas()">Executar</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_conversao"></span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>IMC</h2>
+            <form>
+                <input type="number" id="peso" placeholder="Digite seu peso">
+                <input type="number" id="altura" placeholder="Digite sua altura">
+            </form>
+            <div>
+                <button onclick="imc()">Executar</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_imc"></span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Tipo de Triângulo</h2>
+            <form>
+                <input type="number" id="triangulo1" placeholder="Digite a 1ª medida">
+                <input type="number" id="triangulo2" placeholder="Digite a 2ª medida">
+                <input type="number" id="triangulo3" placeholder="Digite a 3ª medida">
+            </form>
+            <div>
+                <button onclick="triangulo()">Executar</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_triangulo"></span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Verificação de Número Primo</h2>
+            <form>
+                <input type="number" id="numeroprimo" placeholder="Informe o número">
+            </form>
+            <div>
+                <button onclick="numero_primo()">Executar</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_numero_primo"></span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Fatorial</h2>
+            <form>
+                <input type="number" id="fatorial" placeholder="Insira um número">
+            </form>
+            <div>
+                <button onclick="fatorial()">Executar</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_fatorial"></span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Verificador de CPF</h2>
+            <form>
+                <input type="text" id="entrada" placeholder="123.456.789-00">
+            </form>
+            <div>
+                <button onclick="cpf()">Verificar</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_cpf"></span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Potenciação</h2>
+            <form>
+                <input type="text" id="base" placeholder="Digite o denominador">
+                <input type="text" id="expoente" placeholder="Digite o expoente">
+            </form>
+            <div>
+                <button onclick="potenciacao()">Executar</button>
+            </div>
+            <div id="resultado">
+                Resultado: <span id="res_potenciacao"></span>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
